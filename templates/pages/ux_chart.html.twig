@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} CHART{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX CHART</h1>
+
+        <p><a href="https://github.com/symfony/ux-chartjs" target="_blank">https://github.com/symfony/ux-chartjs</a></p>
+
+        <div class="row mt-5">
+        {% for title, chart in charts %}
+            <div class="col-6 pt-3">
+                <div class="card bg-light">
+                    <div class="card-header">{{ title }}</div>
+                    <div class="card-body">
+                        {{ render_chart(chart) }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}

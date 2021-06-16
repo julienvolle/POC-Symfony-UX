@@ -10,7 +10,7 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body {{ stimulus_controller('symfony/ux-swup/swup') }}>
         {% block body %}
             {% block header %}
                 <header>
@@ -36,7 +36,7 @@
                 </header>
             {% endblock %}
             {% block main %}
-                <main role="main">
+                <main role="main" id="swup">
                     {% block content %}
                         <section class="jumbotron text-center p-5 bg-light">
                             <div class="container">

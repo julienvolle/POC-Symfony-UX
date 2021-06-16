@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} CROPPER{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX CROPPER</h1>
+
+        <p><a href="https://github.com/symfony/ux-cropperjs" target="_blank">https://github.com/symfony/ux-cropperjs</a></p>
+
+        {% if cropped is defined and cropped is not null %}
+            <p><img src="{{ cropped }}" alt="Cropped image" class="img-thumbnail" /></p>
+        {% endif %}
+
+        {% if thumbnail is defined and thumbnail is not null %}
+            <p><img src="{{ thumbnail }}" alt="Thumbnail of cropped image" class="img-thumbnail" /></p>
+        {% endif %}
+
+        <div class="row mt-5">
+            <div class="col">{{ form(form) }}</div>
+        </div>
+
+    </div>
+
+{% endblock %}

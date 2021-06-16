@@ -5,6 +5,16 @@
                 "enabled": true,
                 "fetch": "eager"
             }
+        },
+        "@symfony/ux-cropperjs": {
+            "cropper": {
+                "enabled": true,
+                "fetch": "eager",
+                "autoimport": {
+                    "cropperjs/dist/cropper.min.css": true,
+                    "@symfony/ux-cropperjs/src/style.css": true
+                }
+            }
         }
     },
     "entrypoints": []

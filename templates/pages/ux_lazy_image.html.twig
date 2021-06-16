@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} LAZY IMAGE{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX LAZY IMAGE</h1>
+
+        <p><a href="https://github.com/symfony/ux-lazy-image" target="_blank">https://github.com/symfony/ux-lazy-image</a></p>
+
+        <p>
+            <img {{ stimulus_controller('symfony/ux-lazy-image/lazy-image') }}
+                 data-hd-src="{{ asset('build/images/366-3840x2880.jpg') }}"
+                 src="{{ asset('build/images/366-90x67.jpg') }}"
+                 width="1280"
+                 height="960"
+                 class="img-thumbnail"
+                 alt="Symfony UX LazyImage"/>
+        </p>
+
+    </div>
+
+{% endblock %}

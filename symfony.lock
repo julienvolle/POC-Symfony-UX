@@ -35,6 +35,9 @@
     "intervention/image": {
         "version": "2.5.1"
     },
+    "kornrunner/blurhash": {
+        "version": "v1.2.1"
+    },
     "laminas/laminas-code": {
         "version": "4.3.0"
     },
@@ -522,6 +525,9 @@
         "version": "v1.3.0"
     },
     "symfony/ux-dropzone": {
+        "version": "v1.3.0"
+    },
+    "symfony/ux-lazy-image": {
         "version": "v1.3.0"
     },
     "symfony/validator": {

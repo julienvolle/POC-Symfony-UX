@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} DROPZONE{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX DROPZONE</h1>
+
+        <p><a href="https://github.com/symfony/ux-dropzone" target="_blank">https://github.com/symfony/ux-dropzone</a></p>
+
+        {% if publicUrl is defined and publicUrl is not null %}
+            <p><img src="{{ publicUrl }}" alt="File" class="img-thumbnail" /></p>
+        {% endif %}
+
+        <div class="row mt-5">
+            <div class="col">{{ form(form) }}</div>
+        </div>
+
+    </div>
+
+{% endblock %}

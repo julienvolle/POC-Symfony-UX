@@ -14,6 +14,53 @@
             "./config/routes/annotations.yaml"
         ]
     },
+    "doctrine/cache": {
+        "version": "2.1.1"
+    },
+    "doctrine/collections": {
+        "version": "1.6.8"
+    },
+    "doctrine/common": {
+        "version": "3.2.0"
+    },
+    "doctrine/dbal": {
+        "version": "3.2.0"
+    },
+    "doctrine/deprecations": {
+        "version": "v0.5.3"
+    },
+    "doctrine/doctrine-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.4",
+            "ref": "032f52ed50a27762b78ca6a2aaf432958c473553"
+        },
+        "files": [
+            "config/packages/doctrine.yaml",
+            "config/packages/prod/doctrine.yaml",
+            "config/packages/test/doctrine.yaml",
+            "src/Entity/.gitignore",
+            "src/Repository/.gitignore"
+        ]
+    },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "3.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.1",
+            "ref": "ee609429c9ee23e22d6fa5728211768f51ed2818"
+        },
+        "files": [
+            "config/packages/doctrine_migrations.yaml",
+            "migrations/.gitignore"
+        ]
+    },
+    "doctrine/event-manager": {
+        "version": "1.1.1"
+    },
     "doctrine/inflector": {
         "version": "2.0.3"
     },
@@ -22,6 +69,18 @@
     },
     "doctrine/lexer": {
         "version": "1.2.1"
+    },
+    "doctrine/migrations": {
+        "version": "3.3.2"
+    },
+    "doctrine/orm": {
+        "version": "2.10.2"
+    },
+    "doctrine/persistence": {
+        "version": "2.2.3"
+    },
+    "doctrine/sql-formatter": {
+        "version": "1.1.2"
     },
     "egulias/email-validator": {
         "version": "3.1.1"
@@ -46,6 +105,12 @@
     },
     "laminas/laminas-zendframework-bridge": {
         "version": "1.2.0"
+    },
+    "lcobucci/clock": {
+        "version": "2.0.0"
+    },
+    "lcobucci/jwt": {
+        "version": "4.1.5"
     },
     "monolog/monolog": {
         "version": "2.2.0"
@@ -111,6 +176,9 @@
     },
     "psr/event-dispatcher": {
         "version": "1.0.0"
+    },
+    "psr/http-factory": {
+        "version": "1.0.1"
     },
     "psr/http-message": {
         "version": "1.0.1"
@@ -235,6 +303,9 @@
     "symfony/deprecation-contracts": {
         "version": "v2.4.0"
     },
+    "symfony/doctrine-bridge": {
+        "version": "v5.3.11"
+    },
     "symfony/dom-crawler": {
         "version": "v5.3.0"
     },
@@ -329,6 +400,21 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/mercure": {
+        "version": "v0.6.0"
+    },
+    "symfony/mercure-bundle": {
+        "version": "0.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "0.3",
+            "ref": "e0a854b5439186e04b28fb8887b42c54f24a0d32"
+        },
+        "files": [
+            "./config/packages/mercure.yaml"
+        ]
+    },
     "symfony/mime": {
         "version": "v5.3.0"
     },
@@ -364,9 +450,6 @@
     },
     "symfony/options-resolver": {
         "version": "v5.3.0"
-    },
-    "symfony/orm-pack": {
-        "version": "v2.1.0"
     },
     "symfony/password-hasher": {
         "version": "v5.3.0"
@@ -531,6 +614,12 @@
         "version": "v1.3.0"
     },
     "symfony/ux-swup": {
+        "version": "v1.3.0"
+    },
+    "symfony/ux-turbo": {
+        "version": "v1.3.0"
+    },
+    "symfony/ux-turbo-mercure": {
         "version": "v1.3.0"
     },
     "symfony/validator": {

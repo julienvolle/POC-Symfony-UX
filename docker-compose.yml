@@ -10,3 +10,24 @@ services:
     volumes:
       - ./:/var/www/html
     restart: always
+
+  mercure:
+    image: dunglas/mercure
+    container_name: mercure
+    environment:
+      # Uncomment the following line to disable HTTPS
+      SERVER_NAME: ':80'
+      MERCURE_PUBLISHER_JWT_KEY: '!ChangeMe!'
+      MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeMe!'
+    # Uncomment the following line to enable the development mode
+    command: /usr/bin/caddy run -config /etc/caddy/Caddyfile.dev
+    ports:
+      - "8888:80"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Badge index{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Badge index</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Label</th>
+                    <th>Counter</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for badge in badges %}
+                <tr>
+                    <td>{{ badge.id }}</td>
+                    <td>{{ badge.label }}</td>
+                    <td>{{ badge.counter }}</td>
+                    <td>
+                        <a class="btn-sm btn-info" href="{{ path('badge_show', {'id': badge.id}) }}">show</a>
+                        <a class="btn-sm btn-warning" href="{{ path('badge_edit', {'id': badge.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="btn-sm btn-success" href="{{ path('badge_new') }}">Create new</a>
+
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,22 @@
+{# Learn how to use Turbo Streams: https://github.com/symfony/ux-turbo#broadcast-doctrine-entities-update #}
+{% block create %}
+<turbo-stream action="append" target="badges">
+    <template>
+        <div id="{{ 'badge_' ~ id }}" class="btn btn-sm btn-primary">
+            {{ entity.label }} <span class="badge bg-danger">{{ entity.counter }}</span>
+        </div>
+    </template>
+</turbo-stream>
+{% endblock %}
+
+{% block update %}
+<turbo-stream action="update" target="badge_{{ id }}">
+    <template>
+        {{ entity.label }} <span class="badge bg-danger">{{ entity.counter }}</span>
+    </template>
+</turbo-stream>
+{% endblock %}
+
+{% block remove %}
+<turbo-stream action="remove" target="badge_{{ id }}"></turbo-stream>
+{% endblock %}

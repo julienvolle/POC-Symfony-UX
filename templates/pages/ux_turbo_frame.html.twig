@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} TURBO FRAME{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX TURBO FRAME</h1>
+
+        <p><a href="https://github.com/symfony/ux-turbo#decomposing-complex-pages-with-turbo-frames" target="_blank">https://github.com/symfony/ux-turbo#decomposing-complex-pages-with-turbo-frames</a></p>
+
+        <div class="border p-3 mb-3">
+            {% block turbo_frame %}
+                <turbo-frame id="my_first_turbo_frame" src="{{ path('ux_turbo_frame_1') }}">
+                    Loading...
+                </turbo-frame>
+            {% endblock %}
+        </div>
+
+        <div class="border p-3 mb-3">
+            {% block turbo_frame_private %}
+                <turbo-frame id="private_turbo_frame" src="{{ fragment_uri(controller('App\\Controller\\UxTurboFrameController::privateFrame')) }}">
+                    Loading...
+                </turbo-frame>
+            {% endblock %}
+        </div>
+
+        <div class="border p-3 mb-3">
+            {% block turbo_frame_public %}
+                <turbo-frame id="public_turbo_frame" src="{{ fragment_uri(controller('App\\Controller\\UxTurboFrameController::publicFrame')) }}">
+                    Loading...
+                </turbo-frame>
+            {% endblock %}
+        </div>
+
+    </div>
+
+{% endblock %}

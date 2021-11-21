@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} TURBO DRIVE{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX TURBO DRIVE</h1>
+
+        <p><a href="https://github.com/symfony/ux-turbo#accelerating-navigation-with-turbo-drive" target="_blank">https://github.com/symfony/ux-turbo#accelerating-navigation-with-turbo-drive</a></p>
+
+        {% block turbo_drive %}
+
+            <p>Blanditiis consequatur quaerat alias cum totam omnis. A Quis quas et aliquam consequatur ab esse dignissimos sit recusandae quibusdam aut voluptas facere est mollitia dolorum qui voluptatem porro? Ut dolorem suscipit cum officia illum et sapiente maxime sed voluptate quasi?
+
+            <p><a href="{{ path('ux_turbo_drive_2') }}">Go to next page</a></p>
+
+        {% endblock %}
+
+    </div>
+
+{% endblock %}

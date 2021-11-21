@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} TURBO FORM{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <h1>Symfony UX TURBO FORM</h1>
+
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endfor %}
+
+        <div class="py-5">
+
+            {{ form_start(form, {'attr': {'novalidate': true}}) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+
+        </div>
+
+    </div>
+
+{% endblock %}

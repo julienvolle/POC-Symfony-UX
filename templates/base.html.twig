@@ -2,8 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="turbo-cache-control" content="no-cache">
         <title>{% block title %}Symfony UX{% endblock %}</title>
         {% block stylesheets %}
+            <link rel="shortcut icon" href="#">
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
         {% block javascripts %}
@@ -30,6 +32,10 @@
                                 <li class="nav-item"><a class="nav-link" href="{{ path('ux_cropper') }}">CROPPER</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ path('ux_dropzone') }}">DROPZONE</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ path('ux_lazy_image') }}">LAZYIMAGE</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path('ux_turbo_drive_1') }}">TURBO DRIVE</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path('ux_turbo_form') }}">TURBO FORM</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path('ux_turbo_frame') }}">TURBO FRAME</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ path('ux_turbo_stream') }}">TURBO STREAM</a></li>
                             </ul>
                         </div>
                     </nav>

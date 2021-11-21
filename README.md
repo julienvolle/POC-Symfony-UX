@@ -90,3 +90,17 @@ composer require symfony/ux-swup && yarn install --force
 # Build
 yarn run build
 ```
+
+### UX Turbo
+> GitHub : [https://github.com/symfony/ux-turbo](https://github.com/symfony/ux-turbo)  
+> Source : [https://turbo.hotwired.dev/](https://turbo.hotwired.dev/)
+
+```
+# Install UX Turbo + Mercure
+composer require symfony/ux-turbo-mercure && yarn install --force
+
+# Build
+yarn run build
+
+# WARNING: Disable Symfony UX Swup!
+```
